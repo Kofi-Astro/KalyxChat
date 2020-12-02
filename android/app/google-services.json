@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "321892963078",
+    "firebase_url": "https://kalyxchat.firebaseio.com",
+    "project_id": "kalyxchat",
+    "storage_bucket": "kalyxchat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321892963078:android:0e62c04a8c004285fa8487",
+        "android_client_info": {
+          "package_name": "com.kelvinAgyemang.kalyxchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321892963078-bto6k6vao7vmnddlciucl3dqhpaa79oa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kelvinAgyemang.kalyxchat",
+            "certificate_hash": "ec8d4f9bd4860de2b0af7dfe61ead060191223c6"
+          }
+        },
+        {
+          "client_id": "321892963078-g6e4qod2adeffpl4jg6e35ls4nbik4ha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWquVi7Mnr4Dci1CGFeMYxox4UrQUTg2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321892963078-g6e4qod2adeffpl4jg6e35ls4nbik4ha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
