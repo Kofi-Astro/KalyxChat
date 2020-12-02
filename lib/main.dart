@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './pages/home.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -8,9 +10,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'FlutterShare',
+      title: 'KalyxChat',
       debugShowCheckedModeBanner: false,
-      home: Text("Hello World"),
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+        accentColor: Colors.teal,
+      ),
+      home: Home(),
     );
   }
 }
