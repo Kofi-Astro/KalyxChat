@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/progress.dart';
@@ -12,25 +13,40 @@ class Timeline extends StatefulWidget {
 }
 
 class _TimelineState extends State<Timeline> {
+  List<dynamic> users = [];
   @override
   void initState() {
-    getUsers();
+    Future.delayed(Duration.zero).then((_) {
+      getUsers();
+    });
+
     super.initState();
   }
 
-  getUsers() {
-    userRef.get().then((QuerySnapshot snapshot) {
-      snapshot.docs.forEach((DocumentSnapshot document) {
-        print(document.data);
-      });
+  getUsers() async {
+    final QuerySnapshot snapshot = await userRef.get();
+    setState(() {
+      users = snapshot.docs;
     });
+
+    // snapshot.docs.forEach((DocumentSnapshot doc) {
+    //   print(doc.data);
+    // });
   }
+
+  // userRef.get().then((QuerySnapshot snapshot) {
+  //   snapshot.docs.forEach((DocumentSnapshot document) {
+  //     print(document.data);
+  //   });
+  // });
+  // }
 
   @override
   Widget build(context) {
     return Scaffold(
       appBar: header(context, isAppTitle: true),
-      body: circularProgress(),
+      body: ListView(
+          children: users.map((user) => Text(user['username'])).toList()),
     );
   }
 }
